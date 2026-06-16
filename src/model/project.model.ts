@@ -1,9 +1,9 @@
 import mongoose, { Document, Schema } from "mongoose";
 const projectSchema = new mongoose.Schema(
   {
-    title: { type: String, require: true, trim: true },
-    description: { type: String, require: true, trim: true },
-    techStack: { type: String, require: true, trim: true },
+    title: { type: String, required: true, trim: true },
+    description: { type: String, required: true, trim: true },
+    techStack: { type: String, required: true, trim: true },
     githubUrl: String,
     liveUrl: String,
     image: String,
