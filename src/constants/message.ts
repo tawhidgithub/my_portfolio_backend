@@ -5,6 +5,10 @@ export const MESSAGES = {
     DELETE_SUCCESS: "Skills deleted successfully",
     SKILLS_NOT_FOUND: "Skills Not Found",
   },
+  LOGIN: {
+    SUCCESS: "Login successfully",
+    UNSUCCESS: "Login is Failed",
+  },
   YOUTUBE: {
     UPDATE_SUCCESS: "Youtube updated successfully",
     GET_LIST: "Youtube data come successfully",

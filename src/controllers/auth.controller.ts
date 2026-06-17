@@ -3,6 +3,8 @@ import bcrypt from "bcryptjs";
 
 import Admin from "../model/Admin.model";
 import generateToken from "../utils/generateToken";
+import { sendResponse } from "../utils/response";
+import { MESSAGES } from "../constants/message";
 
 export const loginAdmin = async (
   req: Request,
@@ -32,8 +34,12 @@ export const loginAdmin = async (
 
   const token = generateToken(admin._id.toString());
 
-  res.status(200).json({
-    token,
-    admin,
+  sendResponse(res, {
+    statusCode: 200,
+    message: MESSAGES.LOGIN.SUCCESS,
+    data: {
+      accessToken: token,
+      user: admin,
+    },
   });
 };
